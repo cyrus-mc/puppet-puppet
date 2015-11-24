@@ -39,7 +39,7 @@ class puppet::agent::config (
   file { 
     "${puppet::params::config_path}/puppet.conf":
     content => template('puppet/puppet.agent.conf.erb'),
-    notify => Service [ 'puppet-agent' ];
+    notify => Service[ 'puppet-agent' ];
   }
   
 
